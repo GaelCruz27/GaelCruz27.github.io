@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidos por el amor - Fabiola & Felipe</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Tangerine:wght@400;700&family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f7f2;
+            background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png"); /* Fondo de textura de papel */
+            font-family: 'Playfair Display', serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d4af37' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E"), 
+                           url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.03'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-blend-mode: overlay;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        .border-frame {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid #d4af37;
+            z-index: 1;
+            pointer-events: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .header {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        
+        .header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 50%, rgba(212,175,55,0) 100%);
+        }
+        
+        .pre-names {
+            font-family: 'Dancing Script', cursive;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 72px;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            line-height: 1.2;
+        }
+        
+        .names span {
+            display: block;
+            font-size: 40px;
+            color: #9a7b16; /* Cambiado a un dorado menos saturado */
+            margin: 5px 0;
+        }
+        
+        .date {
+            font-size: 22px;
+            margin: 30px 0;
+            color: #333;
+        }
+        
+        .date strong {
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 24px;
+        }
+        
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 40px 0;
+            gap: 40px;
+        }
+        
+        .detail-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 8px;
+            flex: 1 1 300px;
+            position: relative;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .detail-card::before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 4px;
+            pointer-events: none;
+        }
+        
+        .detail-title {
+            font-family: 'Dancing Script', cursive;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .detail-content {
+            color: #333;
+            font-size: 16px;
+        }
+        
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 15px;
+            opacity: 0.8;
+        }
+        
+        .dress-code {
+            margin: 40px 0;
+            padding: 30px;
+            background-color: rgba(249, 247, 242, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+        
+        .dress-code-title {
+            font-family: 'Dancing Script', cursive;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .dress-examples {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .dress-example {
+            text-align: center;
+        }
+        
+        .dress-example img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #b28e1d; /* Cambiado a un dorado menos saturado */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .dress-example img:hover {
+            transform: scale(1.05);
+        }
+        
+        .dress-example p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        
+        .map-section {
+            margin: 40px 0;
+        }
+        
+        .map-title {
+            font-family: 'Dancing Script', cursive;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .map-container {
+            height: 300px;
+            border: 2px solid #b28e1d; /* Cambiado a un dorado menos saturado */
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .rsvp-button {
+            margin: 40px 0;
+        }
+        
+        .rsvp-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #b28e1d, #c9a53a); /* Cambiado a un dorado menos saturado */
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid #b28e1d; /* Cambiado a un dorado menos saturado */
+            box-shadow: 0 4px 10px rgba(178, 142, 29, 0.3); /* Cambiado a un dorado menos saturado */
+        }
+        
+        .rsvp-btn:hover {
+            background: linear-gradient(45deg, #c9a53a, #b28e1d); /* Cambiado a un dorado menos saturado */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(178, 142, 29, 0.4); /* Cambiado a un dorado menos saturado */
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            position: relative;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(212,175,55,0) 0%, rgba(212,175,55,0.8) 50%, rgba(212,175,55,0) 100%);
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        .heart {
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 24px;
+            display: inline-block;
+            animation: beat 1.5s infinite alternate;
+            transform-origin: center;
+        }
+        
+        @keyframes beat {
+            to { transform: scale(1.2); }
+        }
+        
+        .countdown {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            margin: 40px 0;
+        }
+        
+        .countdown span {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 15px;
+            background: linear-gradient(45deg, #b28e1d, #c9a53a); /* Cambiado a un dorado menos saturado */
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            min-width: 70px;
+        }
+        
+        .decorative-element {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .decorative-divider {
+            position: relative;
+            width: 60%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .decorative-divider:before, .decorative-divider:after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 40%;
+            background: linear-gradient(90deg, rgba(212,175,55,0.2) 0%, rgba(212,175,55,0.8) 100%);
+        }
+        
+        .decorative-divider:before {
+            left: 0;
+        }
+        
+        .decorative-divider:after {
+            right: 0;
+            background: linear-gradient(90deg, rgba(212,175,55,0.8) 0%, rgba(212,175,55,0.2) 100%);
+        }
+        
+        .decorative-divider i {
+            color: #b28e1d; /* Cambiado a un dorado menos saturado */
+            font-size: 24px;
+            z-index: 1;
+        }
+        
+        .decorative-image {
+            margin: 20px 0;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .decorative-image img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 50%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 3px solid #fff;
+        }
+        
+        .decorative-image:before, .decorative-image:after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            border: 2px solid #b28e1d; /* Cambiado a un dorado menos saturado */
+            border-radius: 50%;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .decorative-image:before {
+            top: -15px;
+            left: -15px;
+        }
+        
+        .decorative-image:after {
+            bottom: -15px;
+            right: -15px;
+        }
+        
+        .floral-corner {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            opacity: 0.1;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .floral-corner.top-left {
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23d4af37' d='M95.8,27.3c-2.4-12.4-14.5-14.6-26.5-13.6c-0.5,0-1,0.1-1.4,0.1c-3.7-7.2-10.9-11.2-19.5-11.7C36.9,1.4,26.1,6.4,21.2,13 C11,14.2,1.7,18.8,1.1,28.5c-0.7,10.8,7.5,19.8,17.9,22.2c3.4,9.2,12.5,15.6,23.8,15.1c6.4-0.3,12.9-2.6,17.3-5.5c10.4,1.3,19.9-4.7,20.6-14.9 c0.1-1.7,0-3.3-0.2-4.8c2.5-0.9,4.9-2.2,7-3.9C93.8,32.4,96.5,30.5,95.8,27.3z'/%3E%3C/svg%3E");
+        }
+        
+        .floral-corner.top-right {
+            top: 0;
+            right: 0;
+            transform: rotate(90deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23d4af37' d='M95.8,27.3c-2.4-12.4-14.5-14.6-26.5-13.6c-0.5,0-1,0.1-1.4,0.1c-3.7-7.2-10.9-11.2-19.5-11.7C36.9,1.4,26.1,6.4,21.2,13 C11,14.2,1.7,18.8,1.1,28.5c-0.7,10.8,7.5,19.8,17.9,22.2c3.4,9.2,12.5,15.6,23.8,15.1c6.4-0.3,12.9-2.6,17.3-5.5c10.4,1.3,19.9-4.7,20.6-14.9 c0.1-1.7,0-3.3-0.2-4.8c2.5-0.9,4.9-2.2,7-3.9C93.8,32.4,96.5,30.5,95.8,27.3z'/%3E%3C/svg%3E");
+        }
+        
+        .floral-corner.bottom-left {
+            bottom: 0;
+            left: 0;
+            transform: rotate(270deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23d4af37' d='M95.8,27.3c-2.4-12.4-14.5-14.6-26.5-13.6c-0.5,0-1,0.1-1.4,0.1c-3.7-7.2-10.9-11.2-19.5-11.7C36.9,1.4,26.1,6.4,21.2,13 C11,14.2,1.7,18.8,1.1,28.5c-0.7,10.8,7.5,19.8,17.9,22.2c3.4,9.2,12.5,15.6,23.8,15.1c6.4-0.3,12.9-2.6,17.3-5.5c10.4,1.3,19.9-4.7,20.6-14.9 c0.1-1.7,0-3.3-0.2-4.8c2.5-0.9,4.9-2.2,7-3.9C93.8,32.4,96.5,30.5,95.8,27.3z'/%3E%3C/svg%3E");
+        }
+        
+        .floral-corner.bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: rotate(180deg);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23d4af37' d='M95.8,27.3c-2.4-12.4-14.5-14.6-26.5-13.6c-0.5,0-1,0.1-1.4,0.1c-3.7-7.2-10.9-11.2-19.5-11.7C36.9,1.4,26.1,6.4,21.2,13 C11,14.2,1.7,18.8,1.1,28.5c-0.7,10.8,7.5,19.8,17.9,22.2c3.4,9.2,12.5,15.6,23.8,15.1c6.4-0.3,12.9-2.6,17.3-5.5c10.4,1.3,19.9-4.7,20.6-14.9 c0.1-1.7,0-3.3-0.2-4.8c2.5-0.9,4.9-2.2,7-3.9C93.8,32.4,96.5,30.5,95.8,27.3z'/%3E%3C/svg%3E");
+        }
+        
+        @media (max-width: 768px) {
+            .names {
+                font-size: 48px;
+            }
+            
+            .names span {
+                font-size: 32px;
+            }
+            
+            .details {
+                flex-direction: column;
+            }
+            
+            .dress-examples {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .dress-example {
+                margin-bottom: 20px;
+            }
+            
+            .countdown span {
+                margin: 5px;
+                font-size: 16px;
+                min-width: 60px;
+            }
+        }
+
+        /* Nuevo estilo para el botón de cómo llegar */
+        .directions-button {
+            margin: 20px 0;
+        }
+
+        .directions-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #b28e1d, #c9a53a); /* Cambiado a un dorado menos saturado */
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 22px;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            border: 2px solid #b28e1d; /* Cambiado a un dorado menos saturado */
+            box-shadow: 0 4px 10px rgba(178, 142, 29, 0.3); /* Cambiado a un dorado menos saturado */
+        }
+
+        .directions-btn:hover {
+            background: linear-gradient(45deg, #c9a53a, #b28e1d); /* Cambiado a un dorado menos saturado */
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(178, 142, 29, 0.4); /* Cambiado a un dorado menos saturado */
+        }
+    </style>
+</head>
+<body>
+    <!-- Reproductor de música -->
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-bossa.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <div class="container">
+        <div class="floral-corner top-left"></div>
+        <div class="floral-corner top-right"></div>
+        <div class="floral-corner bottom-left"></div>
+        <div class="floral-corner bottom-right"></div>
+        <div class="border-frame"></div>
+        <div class="content">
+            <div class="header">
+                 <div class="date">Tenemos el honor de invitarte a nuestra boda<br>
+                <div class="names">
+                    Fabiola 
+                    <span>&</span>
+                    Felipe 
+                </div>
+                <div class="pre-names">Con la bendición de nuestros Padres</div>
+                <div class="details">
+
+                    <div class="detail-card">
+                        <div class="detail-content">
+                            <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Fabiola Avilés Amaro</p>
+                            <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">José Israel Cruz Mendoza</p>
+                        </div>
+                    </div>
+    
+                    <div class="detail-card">
+                        
+                        <div class="detail-content">
+                            <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Anita López Nuñez</p>
+                            <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Ho-Chi-Minh Oregón Ramírez</p>
+                        </div>
+                    </div>
+                
+                </div>
+                <strong>31 de Mayo de 2025</strong></div>
+            </div>
+            
+            <!-- Temporizador -->
+            <div class="countdown" id="countdown">
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+            </div>
+            
+            <!-- Elemento decorativo -->
+            <div class="decorative-element">
+                <div class="decorative-divider">
+                    <i>♥</i>
+                </div>
+            </div>
+            
+            <div class="details">
+
+                <div class="detail-card">
+                    <div class="detail-title">Recepción</div>
+                    <div class="detail-content">
+                        <p>3:00 PM</p>
+                        <p>Salón Hotel GM Soria</p>
+                        <p>Queréndaro, Michoacán, México</p>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <div class="detail-title">Ceremonia Civil</div>
+                    <div class="detail-content">
+                        <p>3:40 PM</p>
+                        
+                        <p>¡Esperamos contar con tu presencia para celebrar este momento tan especial!</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <!-- Elemento decorativo -->
+            <div class="decorative-element">
+                <div class="decorative-divider">
+                    <i>♥</i>
+                </div>
+            </div>
+            
+            
+                <div class="detail-title">Testigos</div>
+                <div class="detail-content">
+                    <div class="details">
+
+                        <div class="detail-card">
+                            <div class="detail-content">
+                                <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Mariana Yunuén López Ortiz</p>
+                                <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Álvaro Pérez Ortiz</p>
+                            </div>
+                        </div>
+        
+                        <div class="detail-card">
+                            
+                            <div class="detail-content">
+                                <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Berenice Oregón López</p>
+                                <p style="font-family: 'Dancing Script', cursive; font-size: 24px; color: #b28e1d;">Josué Ramírez Rocha</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="detail-title">Nos hace mucha ilusión compartir con ustedes uno de los mejores dias de nuestra vida.</div>
+                   
+                </div>
+    
+           
+            <div class="map-section">
+                <div class="map-title">Ubicación</div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.0529785283506!2d-100.88508608739586!3d19.808223518534007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d2355ffa5f03b%3A0x3c6c0ebdd1f8ce61!2sHotel%20GM%20Soria!5e0!3m2!1ses-419!2smx!4v1741301547329!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>Salón Soria, Queréndaro, Michoacán, México</p>
+            </div>
+
+            <!-- Botón para indicar cómo llegar -->
+            <div class="directions-button">
+                <a href="https://www.google.com/maps/dir//Hotel+GM+Soria,+Queréndaro,+Michoacán,+México/@19.8082235,-100.8850861,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x842d2355ffa5f03b:0x3c6c0ebdd1f8ce61!2m2!1d-100.8850861!2d19.8082235" class="directions-btn" target="_blank">¿Cómo llegar?</a>
+            </div>
+            
+            <div class="rsvp-button">
+                <a href="https://wa.me/524432597767?text=Hola,%20confirmo%20mi%20asistencia%20a%20la%20boda%20de%20Fabiola%20y%20Felipe.%20Nombre(s):" class="rsvp-btn">Confirmar Asistencia</a>
+            </div>
+
+            <div class="footer">
+                <p>Gracias por acompañarnos en este día tan especial</p>
+                <p class="heart">♥</p>
+                <p>Fabiola & Felipe</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script para el temporizador -->
+    <script>
+        const countdown = () => {
+            const weddingDate = new Date("May 31, 2025 12:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = `${days} Días`;
+            document.getElementById("hours").innerText = `${hours} Horas`;
+            document.getElementById("minutes").innerText = `${minutes} Minutos`;
+            document.getElementById("seconds").innerText = `${seconds} Segundos`;
+        };
+
+        setInterval(countdown, 1000);
+        countdown(); // Llamada inicial para evitar retraso
+    </script>
+</body>
+</html>
